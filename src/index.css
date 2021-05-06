@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    h1, input{
+        font-family: 'Original Surfer', cursive;
+    }
+}
