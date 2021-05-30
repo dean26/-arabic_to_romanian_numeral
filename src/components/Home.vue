@@ -65,7 +65,11 @@
       </button>
     </div>
 
-    <div class="my-2 px-2 w-1/3 overflow-hidden md:my-2 md:px-2"></div>
+    <Button
+    :key="0"
+    :digit="0"
+    :clickButton="clickDigit"
+    ></Button>
 
     <div class="my-2 px-2 w-1/3 overflow-hidden md:my-2 md:px-2">
       <button
@@ -124,6 +128,7 @@ export default {
   },
   watch: {
     arabic: function() {
+      if(this.arabic.length > 7) this.arabic = this.arabic.substr(0,7); 
       this.romanian = arabic_to_romanian.convert(Number(this.arabic));
     }
   }
